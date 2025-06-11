@@ -4,6 +4,7 @@
     "email": "roserra@sqli.com",
     "badge": "Playwright Automation (Beginner)",
     "issued_on": "2025-06-11",
+    "expires_on": "Does not expire",
     "id": "PW-2025-0001"
   },
   {
@@ -11,6 +12,7 @@
     "email": "vcaravaca@sqli.com",
     "badge": "Playwright Automation (Beginner)",
     "issued_on": "2025-06-11",
+    "expires_on": "Does not expire",
     "id": "PW-2025-0002"
   }
 ]
