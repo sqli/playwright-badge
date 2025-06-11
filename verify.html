@@ -34,4 +34,42 @@
   <div class="container">
     <h1>Verify Certification</h1>
     <input type="text" id="searchInput" placeholder="Enter Name or ID (e.g., PW-2025-0001)" />
-    <but
+    <button onclick="verify()">Verify</button>
+
+    <div id="result" class="result"></div>
+  </div>
+
+  <script>
+    async function verify() {
+      const input = document.getElementById('searchInput').value.trim().toLowerCase();
+      const resultDiv = document.getElementById('result');
+      resultDiv.innerHTML = 'Searching...';
+
+      try {
+        const res = await fetch('registry.json');
+        const data = await res.json();
+
+        const match = data.find(entry =>
+          entry.id.toLowerCase() === input || entry.name.toLowerCase().includes(input)
+        );
+
+        if (match) {
+          resultDiv.innerHTML = `
+            <h3>✅ Credential Verified</h3>
+            <p><strong>Name:</strong> ${match.name}</p>
+            <p><strong>Badge:</strong> ${match.badge}</p>
+            <p><strong>Issued on:</strong> ${match.issued_on}</p>
+            <p><strong>Expires on:</strong> ${match.expires_on}</p>
+            <p><strong>ID:</strong> ${match.id}</p>
+          `;
+        } else {
+          resultDiv.innerHTML = `<p>❌ No matching certification found.</p>`;
+        }
+      } catch (error) {
+        resultDiv.innerHTML = `<p>⚠️ Error loading registry. Please try again later.</p>`;
+        console.error(error);
+      }
+    }
+  </script>
+</body>
+</html>
