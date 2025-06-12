@@ -10,14 +10,16 @@
       text-align: center;
       padding-top: 50px;
     }
+
     .container {
       background: white;
       display: inline-block;
       padding: 20px;
       border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
       min-width: 300px;
     }
+
     input, button {
       padding: 10px;
       font-size: 16px;
@@ -25,8 +27,26 @@
       width: 80%;
       max-width: 400px;
     }
+
     .result {
       margin-top: 20px;
+    }
+
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: auto;
+    }
+
+    td {
+      padding: 8px 12px;
+      text-align: left;
+      font-size: 16px;
+      background: transparent;
+    }
+
+    td:first-child {
+      font-weight: bold;
     }
   </style>
 </head>
@@ -56,11 +76,13 @@
         if (match) {
           resultDiv.innerHTML = `
             <h3>✅ Credential Verified</h3>
-            <p><strong>Name:</strong> ${match.name}</p>
-            <p><strong>Badge:</strong> ${match.badge}</p>
-            <p><strong>Issued on:</strong> ${match.issued_on}</p>
-            <p><strong>Expires on:</strong> ${match.expires_on}</p>
-            <p><strong>ID:</strong> ${match.id}</p>
+            <table>
+              <tr><td>Name:</td><td>${match.name}</td></tr>
+              <tr><td>Badge:</td><td>${match.badge}</td></tr>
+              <tr><td>Issued on:</td><td>${match.issued_on}</td></tr>
+              <tr><td>Expires on:</td><td>${match.expires_on}</td></tr>
+              <tr><td>ID:</td><td>${match.id}</td></tr>
+            </table>
           `;
         } else {
           resultDiv.innerHTML = `<p>❌ No matching certification found.</p>`;
