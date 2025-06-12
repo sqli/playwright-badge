@@ -181,12 +181,8 @@
 
     
     <div class="copy-id">
-      ✅ This credential is from <strong>SQLI Group</strong><br />
-      <!-- Footer -->
-	<div class="footer">
-  	More about the Issuer: <strong>SQLI Group</strong><br />
-  	<a href="https://sqli.github.io/playwright-badge/verify.html">Verify New Credential</a>
-	</div>
+      ✅ This credential is from <strong>SQLI Group</strong>
+      <a href="https://sqli.github.io/playwright-badge/verify.html">Verify Credentials</a>
     </div>
 
     
