@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Testing automation with Playwright: Beginner Level</title>
+  <style>
+    body {
+      background-color: #fffaf0;
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #000;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      background-color: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 12px;
+      margin-bottom: 24px;
+    }
+
+    .issuer-logo {
+      height: 50px;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    .sub-header {
+      color: #666;
+      margin-bottom: 16px;
+    }
+
+    .credential-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  flex-wrap: nowrap; /* Forces single row */
+	}
+
+    .credential-sidebar {
+  	flex: 10 10 200px; /* Fixed width */
+  	background-color: #fffaf0;
+  	
+    
+    border-radius: 16px;
+      padding: 14px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    
+	}
+
+
+    .credential-sidebar h3 {
+      font-size: 16px;
+      margin-bottom: 8px;
+    }
+
+    .credential-sidebar ul {
+      padding-left: 20px;
+      font-size: 14px;
+      margin: 0;
+    }
+
+    .credential-badge {
+    display: flex;
+    align-items: flex-start; /* Centers horizontally */
+    margin: 0 0; /* Optional spacing above and below */
+    }
+
+   .credential-badge img {
+   max-width: 250px; /* Larger badge */
+   width: 100%;
+   height: auto;
+    }
+
+    .meta {
+      margin-top: 24px;
+    }
+
+    .meta label {
+      font-weight: bold;
+      display: block;
+      margin-top: 12px;
+    }
+
+    .copy-id {
+      margin-top: 16px;
+      background-color: #f0f0f0;
+      padding: 12px;
+      border-radius: 8px;
+      font-size: 13px;
+    }
+
+    .badge-actions {
+      margin-top: 32px;
+      border-top: 1px solid #ccc;
+      padding-top: 20px;
+    }
+
+    .badge-actions button {
+      background: black;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin: 5px;
+    }
+
+    .footer {
+      margin-top: 40px;
+      font-size: 12px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Header -->
+    <div class="header">
+      <img src="https://sqli.github.io/playwright-badge/Sqli-Logo.png" alt="Issuer Logo" class="issuer-logo" />
+    </div>
+
+    <!-- Credential Title -->
+    <h1>Testing automation with Playwright <br><em>(Beginner Level)</em></h1>
+    <div class="sub-header">SQLI Group</div>
+
+    <!-- Credential Content -->
+    <div class="credential-flex">
+    
+    <!-- Right: Badge -->
+      <div class="credential-badge">
+        <img src="https://sqli.github.io/playwright-badge/PlayWrightBadge.png" alt="Badge" />
+      </div>
+      <!-- Left: Topics -->
+      <div class="credential-sidebar">
+        <h3>Topics Covered - Theory and Practice</h3>
+        <ul>
+          <li>Overview - Installation</li>
+          <li>GIT - Create your own branch</li>
+          <li>Simple tests - Create a simple test</li>
+          <li>Playwright config - Run tests
+          <li>Locators - Create longer tests</li>
+          <li>API tests - Create API tests</li>
+          <li>Page objects and Page Manager - create interchangable page objects</li>
+          <li>Advanced object structure - Create a base page</li>
+          <li>Locators - Create longer tests</li>
+          <li>Fixtures - Organize test preconditions</li>
+        </ul>
+      </div>
+
+      
+    </div>
+
+    <!-- Meta Info -->
+    <div class="meta">
+      <label>Issued on:</label>
+      <p>28 January 2025</p>
+
+      <label>Expires on:</label>
+      <p>Does not expire</p>
+
+      <label>Issued to:</label>
+      <p>Roberto Serra</p>
+    </div>
+
+    
+    <div class="copy-id">
+      ✅ This credential is from <strong>SQLI Group</strong><br />
+      <!-- Footer -->
+	<div class="footer">
+  	More about the Issuer: <strong>SQLI Group</strong><br />
+  	<a href="https://sqli.github.io/playwright-badge/verify.html">Verify New Credential</a>
+	</div>
+    </div>
+
+    
+
+    
+
+  </div>
+</body>
+</html>
