@@ -87,10 +87,10 @@
         } else {
           resultDiv.innerHTML = `<p>❌ No matching certification found.</p>`;
         }
-      } catch (error) {
+        } catch (error) {
         resultDiv.innerHTML = `<p>⚠️ Error loading registry. Please try again later.</p>`;
         console.error(error);
-      }
+        }
     }
   </script>
 </body>
