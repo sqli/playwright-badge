@@ -3,41 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <title>Verify Badge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Important for mobile -->
   <style>
     body {
       font-family: sans-serif;
       background-color: #f9f9f9;
       text-align: center;
-      padding-top: 50px;
-    }
-
-    img {
-      max-width: 300px;
+      padding: 20px;
+      margin: 0;
     }
 
     .container {
       background: white;
-      display: inline-block;
       padding: 20px;
       border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      margin: auto;
+      width: 100%;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
     }
 
     table {
-      margin: 20px auto;
+      margin: 0 auto;
       border-collapse: collapse;
-      width: auto;
+      width: 100%;
+      max-width: 400px;
     }
 
     td {
-      padding: 8px 12px;
+      padding: 10px 12px;
       text-align: left;
       font-size: 16px;
       background: transparent;
+      word-wrap: break-word;
     }
 
     td:first-child {
       font-weight: bold;
+      width: 40%;
+    }
+
+    @media screen and (max-width: 480px) {
+      body {
+        padding: 10px;
+      }
+
+      .container {
+        padding: 16px;
+      }
+
+      td {
+        font-size: 18px;
+        padding: 12px 10px;
+      }
     }
   </style>
 </head>
